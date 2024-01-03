@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 자식요서 : '>' -->
+    <div>
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+    <!-- div>p>ul>li -->
+    <div>
+        <p>
+            <ul>
+                <li></li>
+            </ul>
+        </p>
+    </div>
+<!-- 형제노드  ':+' -->
+<div>
+    <ul></ul>
+    <ol></ol>
+</div>
+
+<div>
+    <p></p>
+    <div></div>
+    <span></span>
+</div>
+
+<div>
+    <ul>
+        <li>
+            <a href=""></a>
+            <ul></ul>
+        </li>
+    </ul>
+</div>
+
+<!-- 상위태그로 이동 : '^' -->
+<!-- div>ul>li*4^p -->
+<div>
+    <ul>
+        <li>
+            <a href=""></a>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </li>
+        <p></p>
+    </ul>
+</div>
+
+<div>
+    <ul>
+        <li></li>
+    </ul>
+    <p></p>
+</div>
+
+<div>
+    <ul>
+        <li>
+            <a href="">MENU</a>
+            <ul>
+                <li><a href="">SUBMENU1</a></li>
+                <li><a href="">SUBMENU2</a></li>
+                <li><a href="">SUBMENU3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">MENU</a>
+            <ul>
+                <li><a href="">SUBMENU1</a></li>
+                <li><a href="">SUBMENU2</a></li>
+                <li><a href="">SUBMENU3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">MENU</a>
+            <ul>
+                <li><a href="">SUBMENU1</a></li>
+                <li><a href="">SUBMENU2</a></li>
+                <li><a href="">SUBMENU3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">MENU</a>
+            <ul>
+                <li><a href="">SUBMENU1</a></li>
+                <li><a href="">SUBMENU2</a></li>
+                <li><a href="">SUBMENU3</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!-- 클래스명 -->
+<div class="wrapper">
+    <ul class="menu01">
+        <li><a href=""></a></li>
+    </ul>
+</div>
+<div class="wrapper"></div>
+<div class="wrapper"></div>
+
+<!-- #ID명 -->
+<div id="wrapper"></div>
+<div id="wrapper">
+    <ul id="menu01"></ul>
+</div>
+
+<!-- attr 속성 추가 -->
+<!-- div>ol[type='I',data-menu='menu01']>li*4{text$}] -->
+<div>
+    <ol type="I" ,data-menu="menu01">
+        <li>text1</li>
+        <li>text2</li>
+        <li>text3</li>
+        <li>text4</li>
+    </ol>
+</div>
+
+<!-- .wrapper>ul>li*7{text} -->
+<div class="wrapper">
+    <ul>
+        <li>text</li>
+        <li>text</li>
+        <li>text</li>
+        <li>text</li>
+        <li>text</li>
+        <li>text</li>
+        <li>text</li>
+    </ul>
+
+    
+</div>
+<!-- .wrapper>ul>li*4{text$@8} -->
+<div class="wrapper">
+    <ul>
+        <li>text8</li>
+        <li>text9</li>
+        <li>text10</li>
+        <li>text11</li>
+    </ul>
+</div>
+</body>
+</html>
