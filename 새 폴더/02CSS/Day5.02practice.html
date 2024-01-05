@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        문서내 style 태그
+        외부 css link
+        inline style
+        !important
+     -->
+     <!-- 문서 내 style태그 사용 -->
+     <style>
+        h1{
+            background-color: orange !important;
+            color: white;
+        }
+     </style>
+     <!-- 외부 css 경로 -->
+    <link rel="stylesheet" href="./common.css"> 
+     <!-- 문서 내 style 태그 보다 외부 경로 style 우선 -->
+     
+</head>
+<body>
+    <h1 style="background-color: brown; color: black;">HELLO WORLD</h1>
+   
+</body>
+</html>
+
+<!-- CSS의 style 적용 우선순위
+    1. 속성 값 뒤에 !important를 붙인 속성
+    2. HTML 에서 style을 직접 지정한 속성 
+
+    기본스타일<<외부스타일<<내부스타일<<인라인스타일
+        ex. 기본스타일 <h1></h1>
+            외부스타일 <link rel="" href="">
+            내부스타일 <style></style>
+            인라인스타일 <p style="">
+            단, 동일한 head에 내부 스타일보다 외부 스타일을 나중에 정의할 경우, 
+            나중에 정의한 외부스타일이 먼저 적용됨.
+
+    
+    
+    
+    -->

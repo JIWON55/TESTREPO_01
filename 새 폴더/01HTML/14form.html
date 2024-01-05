@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form : 사용자로부터 특정정보를 받아 서버로 전달하는데 사용되는 태그
+        action Attribute : 전달받는 서버 URI
+        method Attribute : 서버로 요청하는 방식
+            - GET        : 사용자 요청 정보를 Query string 으로 전달(default)
+            - POST       : 사용자 요청 정보를 request body(payload) 로 전달
+            - PUT        :
+            - PATCH
+            - DELETE     : 
+        -->
+
+        <div action="/test.jsp" method="post">
+            <div>
+                <label>USERNAME</label>
+                <input type="text" name="user name">
+            </div>
+            <div>
+                <label>PASSWORD</label>
+                <input type="password" name="password">
+            </div>
+            <div>
+                <label>EMAIL</label>
+                <input type="text" name="email">
+            </div>
+            <div>
+                <label>AGE</label>
+                <input type="number" name="age" min="5" max="20" step="2">
+            </div>
+            <div>
+                <label>ADDR</label>
+                <input type="text" name="addr">
+            </div>
+            <div>
+                <label>GENDER</label>
+                <input type="radio" name="gender" value="M"> <span>남</span>&nbsp;&nbsp;
+                <input type="radio" name="gender" value="W"> <span>여</span>
+            </div>
+            <div>
+                <label>HOBBY</label>
+                <input type="checkbox" name="hobbys" value="climbing"> <span>등산</span>&nbsp;
+                <input type="checkbox" name="hobbys" value="reading"> <span>독서</span>&nbsp;
+                <input type="checkbox" name="hobbys" value="movie"> <span>영화</span>&nbsp;
+                <input type="checkbox" name="hobbys" value="fishing"> <span>낚시</span>&nbsp;
+            </div>
+            <div>
+                <label>UPLOAD</label>
+                <input type="file" name="files" multiple> 
+            </div>
+            <div>
+                <label>DATE</label>
+                <input type="date" name="date"> 
+            </div>
+            <div>
+                <label>COLOR</label>
+                <input type="color" name="color"> 
+            </div>    
+            <div>
+                    <label>RANGE</label>
+                    <input type="range" name="range" min="0" max="100" value="30"> 
+            </div>
+            <div>
+                    <label>URL</label>
+                    <input type="url"> 
+            </div>
+            <div>
+                   <select name="location">
+                        <option valu="dague">대구</option>
+                        <option valu="seoul">서울</option>
+                        <option valu="busan">부산</option>
+                        <option valu="daejeon">대전</option>
+                   </select> 
+            </div>
+            <div>
+                <label>MEMO</label>
+                <textarea rows="10" cols="20"></textarea>
+            </div>
+
+            <div>
+                <input type="submit">
+            </div>
+        </form>
+</body>
+</html>
