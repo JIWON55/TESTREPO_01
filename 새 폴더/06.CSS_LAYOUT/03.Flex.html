@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 1500px;
+            height: 800px;
+            margin: 0auto;
+        }
+        .wrapper>.parent{
+            width: 100%;
+            height: 100px;
+            border: 1px solid;
+
+            display: flex;
+            align-content: stretch;
+            flex-wrap: wrap;
+            /* center로 잡으면 stretch안됨 */
+            align-items: center;
+        }
+        .wrapper>.parent>.item{
+            border: 1px solid;
+            flex: 0 0 250%;
+            height: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- .wrapper>.parent>.item*4{Menu $} -->
+    <div class="wrapper">
+        <div class="parent">
+            <div class="item">Menu 1</div>
+            <div class="item">Menu 2</div>
+            <div class="item">Menu 3</div>
+            <div class="item">Menu 4</div>
+        </div>
+    </div>
+</body>
+</html>

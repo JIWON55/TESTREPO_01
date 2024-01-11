@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{}
+        body{}
+        a{text-decoration: none; color:black;}
+        ul{list-style: none;margin: 0px;padding: 0px;}
+        
+        .wrapper{}
+
+        .wrapper>header{
+
+            background-image: url(/02CSS/images/subway.png);
+            background-position: top;
+            background-size: 25vw 20vh;
+            background-repeat: no-repeat;
+            
+        }
+        .wrapper>header>.top-header{
+            border: 1px solid black;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .wrapper>header>nav{
+            height:100px;
+            border: 1px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .wrapper>header>nav>.menu{
+            border: 1px solid yellow;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+        .wrapper>header>nav>.menu>li{
+            /* border: 1px solid red; */
+            width: 150px;
+            height: 75px;
+            line-height: 75px;
+            text-align: center;
+        }
+        .wrapper>header>nav>.menu>li>.submenu{
+            /* border: 1px solid blueviolet; */
+            display: none;
+            position: relative;
+            left: 0px;
+            right: 0px;
+            top: 11px;
+        
+        }
+        .wrapper>header>nav>.menu>li>.submenu>li{
+            height: 35px;
+            line-height: 35px;
+            border: 1px solid;
+        }
+        .wrapper>header>nav>.menu>li>.submenu>li>a{
+            display: block;
+        }
+        .wrapper>header>nav>.menu:hover .submenu{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="top-header">
+                
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="">메뉴소개</a>
+                        <ul class="submenu">
+                            <li><a href="">샌드위치</a></li>
+                            <li><a href="">랩,기타</a></li>
+                            <li><a href="">샐러드</a></li>
+                            <li><a href="">아침메뉴</a></li>
+                            <li><a href="">스마일 썹</a></li>
+                            <li><a href="">단체메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">이용방법</a>
+                        <ul class="submenu">
+                            <li><a href="">써브웨이 이용방법</a></li>
+                            <li><a href="">단체메뉴 이용방법</a></li>
+                            <li><a href="">신선한 재료 소개</a></li>
+                            <li><a href="">APP 이용방법</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">새소식</a>
+                        <ul class="submenu">
+                            <li><a href="">이벤트,프로모션</a></li>
+                            <li><a href="">뉴스,공지사항</a></li>
+                            <li><a href="">광고영상</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">써브웨이</a>
+                        <ul class="submenu">
+                            <li><a href="">써브웨이 역사</a></li>
+                            <li><a href="">써브웨이 약속</a></li>
+                            <li><a href="">샌드위치 아티스트 지원</a></li>
+                            <li><a href="">매장찾기</a></li>
+                           
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">가맹정</a>
+                        <ul class="submenu">
+                            <li><a href="">써브웨이 프랜차이즈</a></li>
+                            <li><a href="">가맹관련 FAQ</a></li>
+                            <li><a href="">가맹신청,문의</a></li>
+                            <li><a href="">지사안내</a></li>
+                            <li><a href="">사업설명회</a></li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section></section>
+        </main>
+        <footer></footer>
+    </div>
+    
+</body>
+</html>
