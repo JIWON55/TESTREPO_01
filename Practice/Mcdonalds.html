@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매그도나르도</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+    <style>
+        body{
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .object-fit{
+            width: 1280px;
+            margin: 0 auto;
+        }
+        a{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-decoration: none;
+        }
+        .wrapper{
+           background-color: white;
+
+        }
+        .wrapper>header{
+            
+            height: 150px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            
+                       
+        }
+        .wrapper>header>.logo{
+            
+        }
+        .wrapper>header>.logo>image{
+
+            
+        }
+
+        .wrapper>header>nav{
+           
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .wrapper>header>nav>ul>li:nth-child(1){
+            margin-right: 85px;
+            padding: 0 10px;
+            
+            
+        }
+        .wrapper>header>nav>ul>li:nth-child(2){
+            margin: 85px;
+            padding: 0 10px;
+        }
+        .wrapper>header>nav>ul>li:nth-child(3){
+            margin-right: 85px;
+            padding: 0 10px;
+        
+        }
+        .wrpper>header>nav>ul>li:nth-child(4){
+            margin-right:  85px;
+            padding: 0 10px;
+        }
+
+        .wrapper>header>nav>ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+        }
+
+        .wrapper>header>nav>ul>li{
+            
+        }
+        .wrapper>header>rent>ul{
+            
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+        }
+        .wrapper>header>rent>.h-right>li:nth-child(1){
+            
+            display: inline-block;
+            width: 80px;
+            padding-top: 2px;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 34px;
+            text-align: center;
+            border-radius: 48px;
+            background: #db0007;
+            /* background-color: red;
+            border-radius: 48%;
+            font-weight: 600;
+            color: white;
+            margin-right: 40px; */
+            
+        }
+        .wrapper>header>rent>.h-right>li:nth-child(2){
+            display: inline-block;
+            width: 80px;
+            padding-top: 2px;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 34px;
+            text-align: center;
+            border-radius: 48px;
+            background: #d87e00;
+            
+        }
+        .wrapper>header>rent>.h-right>li:nth-child(3){
+            display: inline-block;
+            width: 80px;
+            padding-top: 2px;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 34px;
+            text-align: center;
+            border-radius: 48px;
+            background: green;
+            
+        }
+        .wrapper>main{}
+        .wrapper>main>.swipe{
+            width: 1920px;
+            height: 540%;
+        }
+        .wrapper>main>.swipe>img{}
+        .wrapper>main>.inner{
+            padding: 30px 0px 0px 60px;
+        }
+        .wrapper>main>.inner{
+            width: 1200px;
+            height: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrapper>main>.inner>h2{
+            margin: 0px 0px 60px;
+            
+        }
+        .wrapper>main>.inner>.card{
+            list-style: none;
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+            
+            
+            
+            
+        }
+        .wrapper>main>.inner>.card>li{
+            flex-wrap: wrap;
+        }
+        .wrapper>main>.inner>.card>li:nth-child(1){
+            display: inline-block;
+        }
+        .wrapper>main>.inner>.card>li:nth-child(2){
+            display: inline-block
+        }
+        .wrapper>main>.inner>.card>li:nth-child(3){
+            display: inline-block;
+        }
+        .wrapper>main>.inner>.card>li:nth-child(4){}
+        .wrapper>main>.inner>.card>li:nth-child(5){}
+        .wrapper>main>.inner>.card>li:nth-child(6){}
+        .wrapper>main>.inner>div{
+            
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: orange;
+            
+            
+        }
+
+    </style>
+</head>
+<body>
+  <div class="wrapper"> 
+        <header class="object-fit">  
+            <logo>
+                <img src="./images/logo.png" alt="Mc logo">
+
+            </logo>
+            <nav>
+
+                <ul>
+                    <li>
+                        <a href="">Menue</a>
+                    </li>
+                    <li>
+                        <a href="">Store</a>
+                    </li>
+                    <li>
+                        <a href="">What's New</a>
+                    </li>
+                    <li>
+                        <a href="">Story</a>
+                    </li>
+                </ul>
+            </nav>
+            <rent>
+                <ul class="h-right">
+                    <li><a href="">임차문의</a></li>
+                    <li><a href="">RECRUIT</a></li>
+                    <li><a href="">ENG</a></li>
+                </ul>
+
+            </rent>
+            <serch>
+                <input type="button">
+                <img src="./images/ico_search.png" alt="돋보기">
+            </serch>
+        </header>
+        <main>
+            <section class="swipe">
+                <!-- <video src="https://www.mcdonalds.co.kr/kor/images/main/0404_McD_BB_BigMac_30_1920x540.mp4"></video> -->
+                <img src="./images/라즈베리.jpg" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </section>
+            <section class="inner">
+                <h2>McDonald's Live</h2>
+                <div class="card">
+                    <li>
+                        <a href="">
+                            <img src="./images/행운버거.jpg" alt="">
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./images/골드 맥피즈.jpg" alt="">
+                        <a>
+                        
+                    </li>
+                    <li>
+                        <a href=""><img src="./images/치킨랩.jpg" alt="">
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./images/오더.jpg" alt="">
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./images/맥크리스피.jpg" alt="">
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./images/에그머핀.jpg" alt="">
+                        </a>
+                        
+                    </li>
+                </div>
+                <div class="btnMore">
+                    <input type="button">
+                    
+                </div>
+                
+
+            </section>
+        </main>
+    </div>     
+</body>
+</html>
