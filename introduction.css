@@ -1,0 +1,308 @@
+*{
+    box-sizing: border-box;
+    line-height: 30px;
+    font-size: 14px;
+    color: #1f1f1f;
+    padding: 0;
+    margin: 0;
+}
+ul,li{
+    margin: 0;
+    list-style: none;}
+a{text-decoration: none;}
+
+body{
+    height: 100%;
+    overflow: hidden;
+}
+
+.wrapper{
+    position: relative;
+}
+.wrapper>.header{
+    border: 1px solid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* z-index: 101; */
+    /* transition: height 08s; */
+    height: 147px;
+   
+}
+.wrapper>.header>.top-header{
+    border-top: 1px solid ;
+    padding: 0 80px;
+}
+.wrapper>.header>.top-header>ul{
+    display: flex;
+    justify-content: flex-end;
+}
+.wrapper>.header>.top-header>ul>li{
+    padding-left: 20px;
+    position: relative;
+}
+.wrapper>.header>.top-header>ul>li::before{
+    content: '';
+    display: block;
+    width: 1px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(-50%,-50%);
+}   
+.wrapper>.header>.top-header>ul>li>a{
+    display: flex;
+}
+.wrapper>.header>.top-header>ul>li>a>span{
+    color: #1b1b1b;
+}
+.wrapper>.header>.top-header>ul>li>a>img{
+    margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+/* ------------ */
+
+.wrapper>.header>.header-main{
+    border: 1px solid;
+    padding: 40px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+}
+.wrapper>.header>.header-main>.h-section1{
+    border: 1px solid;
+    font-size: 0;
+    line-height: 1;
+    
+}
+.wrapper>.header>.header-main>.h-section1>a{
+    
+}
+.wrapper>.header>.header-main>.h-section1>a>img{}
+
+
+
+
+
+
+/* -------------- */
+
+.wrapper>.header>.header-main>.h-section2{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    display: block;
+    
+}
+.wrapper>.header>.header-main>.h-section2>nav{
+    
+}
+.wrapper>.header>.header-main>.h-section2>nav>.depth1{
+    display: flex;
+    justify-content: flex-end;
+    
+
+
+}
+.wrapper>.header>.header-main>.h-section2>nav>.depth1>li{
+    position:relative;
+    padding: 45px 50px 0 0;
+    
+}
+.wrapper>.header>.header-main>.h-section2>nav>.depth1>li>a{
+    display: block;
+    font-size: 20px;
+    position: relative;
+    padding: 0 0 40px;
+    white-space: nowrap;
+}
+.wrapper>.header>.header-main>.h-section2>nav>.depth1>li:hover>a::after{
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #e0462e;
+    position: absolute;
+    top: 4px;
+    right: -11px;
+}
+.wrapper>.header>.header-main>.h-section2>nav>.depth1>li >a::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #e0462e;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+}    
+
+.wrapper>.header>.header-main>.h-section2>nav>.depth1>li:hover>a {
+    color: #e0462e;
+}
+.wrapper>.header>.header-main>.h-section2>nav>.depth1>li:hover> a::before{
+    display: block;
+}
+
+.depth2{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    line-height: 30px;
+    padding-top: 20px;
+    padding-left: 0px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 1s 0.4s;
+}
+.depth2>li{
+   
+}
+.depth2>li>a{
+    padding: 7px 0 ;
+    display: block;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: left;
+    /* letter-spacing: -.02em; */
+}   
+.depth2>li:hover a{
+    
+    color: #e0462e;
+    white-space: nowrap;
+}
+
+
+
+/* ----------------- */
+
+.wrapper>.header>.header-main>.h-section3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.wrapper>.header>.header-main>.h-section3>.lang{
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.wrapper>.header>.header-main>.h-section3>.lang>p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.wrapper>.header>.header-main>.h-section3>.lang>p>span{
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: -0.5px;
+}
+.wrapper>.header>.header-main>.h-section3>.lang>p>.triangle{
+    margin: 0 0 0 10px;
+    font-size: 0;
+    line-height: 1;
+}
+.wrapper>.header>.header-main>.h-section3>.lang>ul{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 110%;
+    text-align: center;
+    display: none;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 0;
+    box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 5%);
+}
+.wrapper>.header>.header-main>.h-section3>.lang>ul>li{}
+.wrapper>.header>.header-main>.h-section3>.lang>ul>li>a{
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: -0.5px;
+}
+
+
+.wrapper>.header>.header-main>.h-section3>.hamburger{
+    width: 26px;
+    
+    position: relative;
+}
+.wrapper>.header>.header-main>.h-section3>.hamburger>input[type="checkbox"]{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+.wrapper>.header>.header-main>.h-section3>.hamburger>label{
+    
+}
+.wrapper>.header>.header-main>.h-section3>.hamburger>label>span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin: 8px;
+    transition: all 0.3s 
+}
+.h-section3>.hamburger>input[type="checkbox"]:checked+label span:nth-child(1){
+    transform: translate(0px,10px) rotate(-45deg);
+    /* margin-top: 8px; */
+}
+.h-section3>.hamburger>input[type="checkbox"]:checked+label span:nth-child(2){
+    opacity: 0;
+}
+.h-section3>.hamburger>input[type="checkbox"]:checked+label span:nth-child(3){
+    transform: translate(0px,-10px) rotate(45deg);
+}
+.wrapper>main{
+    height: fit-content;
+}
+.wrapper>main>.setion_01{
+
+}
+.wrapper>main>.setion_01>.container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+.wrapper>main>.setion_01>.container>nav{
+    
+}
+.wrapper>main>.setion_01>.container>nav>ul{}
+.wrapper>main>.setion_01>.container>nav>ul>li{}
+.wrapper>main>.setion_01>.container>nav>ul>li>a{}
+.wrapper>main>.setion_01>.container>nav>ul>li>span{}
+
+
+.wrapper>main>.setion_01>.container>.page-name{}
+.wrapper>main>.setion_01>.container>.page-name>h3{}
+
+.wrapper>main>.setion_02>.search{}
+.wrapper>main>.setion_02>.search>.inner{}
+.wrapper>main>.setion_02>.search>.inner>p{}
+.wrapper>main>.setion_02>.search>.inner>.typing-box{}
+.wrapper>main>.setion_02>.search>.inner>.typing-box>input[type="text"]{}
+.wrapper>main>.setion_02>.search>.inner>.typing-box>button{}
