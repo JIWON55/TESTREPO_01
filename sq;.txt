@@ -1,0 +1,54 @@
+show databases;
+information_schema 
+- 테이블, 컬럼, 권한 등 메타데이터가 저장
+      
+performance_schema
+- mysql 서버의 성능과 관련된 정보가 저장
+- ex 스레드정보, Lock Table. 쿼리 실행시간 등. 
+
+mysql
+- mysql 서버 자체를 관리하기 위한 스키마
+- 사용자정보, 권한 및 다양한 설정정보 저장 
+       
+sys
+- mysql 8.x 부터 도입된 DB
+- 성능 모니터링 및 최적와흘 위한 도구와 뷰를 제공
+
+pk : null x / unique o
+
+
+use testdb;
+show tables;
+
+creat table tbl_user(   ('컬럼명' '자료형' '제약조건')
+
+user_id varchr(10) primary key.
+user_password varchar (100) not null.
+user_name varchar (45) not null );
+
+show tables;
+
+desc tbl_user;
+
+
+
+use testdb;
+show tables;
+desc tble_user;
+alter table tbl_user add column user_tel varchar(30) null after user_name; (컬럼 추가)
+alter tble tbl_user change column user_tel user_phone varchar(100) not null;(컬럼 수정)
+
+
+alter table tbl_user drop user_password; (컬럼 삭제)
+
+** delete-dml
+   drop-ddl
+
+
+primarykey 를 기준으로 행을 찾음 - unique한 값을 가지니까
+
+update testdb.tbl_user set user_password='1111'; (전체 적용)
+update tbl_user set user_password='1111' where user_id='user1';
+
+update 테이블명 set 변경컬럼명=변경할 값 where 찾을 컬럼명=찾을 값;
+delete from 테이블 명 where 찾을 컬럼명=찾을 값;
