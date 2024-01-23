@@ -1,0 +1,137 @@
+Microsoft Windows [Version 10.0.19045.3930]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Administrator\Downloads\새 폴더>notepad
+
+C:\Users\Administrator\Downloads\새 폴더>mspaint
+
+C:\Users\Administrator\Downloads\새 폴더>chrome
+'chrome'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+C:\Users\Administrator\Downloads\새 폴더>echo "HELLO WORLD"
+"HELLO WORLD"
+
+C:\Users\Administrator\Downloads\새 폴더>echo "HELLO WORLD" > a.text
+
+C:\Users\Administrator\Downloads\새 폴더>notepad "HELLO WORLD"
+
+C:\Users\Administrator\Downloads\새 폴더>mysqldump -u root -p testdb > testdb_bak.sql
+Enter password: ****
+
+C:\Users\Administrator\Downloads\새 폴더>mysqldump -u root -p testdb tbl_user > testdb_user_bak.sql
+Enter password: ****
+
+C:\Users\Administrator\Downloads\새 폴더>mysql -u root -p testdb < test_bak.sql
+지정된 파일을 찾을 수 없습니다.
+
+C:\Users\Administrator\Downloads\새 폴더>mysql -u root -p testdb < testdb_bak.sql
+Enter password: ****
+
+C:\Users\Administrator\Downloads\새 폴더>dir
+ C 드라이브의 볼륨: Windows
+ 볼륨 일련 번호: B088-B8B1
+
+ C:\Users\Administrator\Downloads\새 폴더 디렉터리
+
+2024-01-23  오후 12:27    <DIR>          .
+2024-01-23  오후 12:27    <DIR>          ..
+2024-01-23  오후 12:21                16 a.text
+2024-01-23  오후 12:25             3,119 testdb_bak.sql
+2024-01-23  오후 12:27             1,986 testdb_user_bak.sql
+               3개 파일               5,121 바이트
+               2개 디렉터리  281,385,385,984 바이트 남음
+
+C:\Users\Administrator\Downloads\새 폴더>mysql -u root -p
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 49
+Server version: 8.0.36 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use testdb;
+Database changed
+mysql> source testdb_bak.sql
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 4 rows affected (0.00 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql>  

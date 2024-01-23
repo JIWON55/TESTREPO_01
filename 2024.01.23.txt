@@ -1,0 +1,483 @@
+Microsoft Windows [Version 10.0.19045.3930]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Administrator>mysql -u root 0p
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+
+C:\Users\Administrator>mysql -u root -p
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.0.36 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| tesdb              |
+| test2db            |
+| testdb             |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> drop database test2db;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| tesdb              |
+| testdb             |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> use testdb;
+Database changed
+mysql> show tables;
++------------------+
+| Tables_in_testdb |
++------------------+
+| tbl_product      |
+| tbl_user         |
++------------------+
+2 rows in set (0.00 sec)
+
+mysql> drop table tbl_user;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> show tables
+    -> ;
++------------------+
+| Tables_in_testdb |
++------------------+
+| tbl_product      |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| tesdb              |
+| testdb             |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> use mysql;
+Database changed
+mysql> select user,host from user;
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
+| user10           | localhost |
++------------------+-----------+
+5 rows in set (0.00 sec)
+
+mysql> create user user20@localhost identified by '1234';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select user,host from user;
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
+| user10           | localhost |
+| user20           | localhost |
++------------------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> create user user30@'%' identified by '1234';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select user,host from user;
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| user30           | %         |
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
+| user10           | localhost |
+| user20           | localhost |
++------------------+-----------+
+7 rows in set (0.00 sec)
+
+mysql> quit
+Bye
+
+C:\Users\Administrator>mysql -u root -p
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 29
+Server version: 8.0.36 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> sho databases;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sho databases' at line 1
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| tesdb              |
+| testdb             |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> quit
+Bye
+
+C:\Users\Administrator>mysql -u user30 -p
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 30
+Server version: 8.0.36 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> quit
+Bye
+
+C:\Users\Administrator>mysql -u user30 -h 192.168.2.254
+ERROR 1045 (28000): Access denied for user 'user30'@'192.168.2.13' (using password: NO)
+
+C:\Users\Administrator>mysql -u user30 -h 192.168.2.254
+ERROR 1045 (28000): Access denied for user 'user30'@'192.168.2.13' (using password: NO)
+
+C:\Users\Administrator>mysql -u user30 -h 192.168.2.254
+ERROR 1045 (28000): Access denied for user 'user30'@'192.168.2.13' (using password: NO)
+
+C:\Users\Administrator>mysql-u user30 -h 192.168.2.254
+'mysql-u'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+C:\Users\Administrator>mysql -u user30 -h 192.168.2.254
+ERROR 1045 (28000): Access denied for user 'user30'@'192.168.2.13' (using password: NO)
+
+C:\Users\Administrator>mysql -u user30 -p
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 31
+Server version: 8.0.36 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> quit
+Bye
+
+C:\Users\Administrator>mysql -u root -p
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 32
+Server version: 8.0.36 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use mysql
+Database changed
+mysql> select user.host from user;
++-----------+
+| host      |
++-----------+
+| %         |
+| localhost |
+| localhost |
+| localhost |
+| localhost |
+| localhost |
+| localhost |
++-----------+
+7 rows in set (0.00 sec)
+
+mysql> show grants for user10;
+ERROR 1141 (42000): There is no such grant defined for user 'user10' on host '%'
+mysql> show grants for user10@localhost;
++----------------------------------------------------+
+| Grants for user10@localhost                        |
++----------------------------------------------------+
+| GRANT USAGE ON *.* TO `user10`@`localhost`         |
+| GRANT SELECT ON `testdb`.* TO `user10`@`localhost` |
++----------------------------------------------------+
+2 rows in set (0.00 sec)
+
+mysql> grant select,insert on testdb.* to user10@localhost;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> grant select,insert,update,delete on testdb.*to user10@localhost;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> grant all privileges on testdb.*to user10@localhost;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> show grants for user10@localhost;
++------------------------------------------------------------+
+| Grants for user10@localhost                                |
++------------------------------------------------------------+
+| GRANT USAGE ON *.* TO `user10`@`localhost`                 |
+| GRANT ALL PRIVILEGES ON `testdb`.* TO `user10`@`localhost` |
++------------------------------------------------------------+
+2 rows in set (0.00 sec)
+
+mysql> revoke all on testdb.* from user10@localhost;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select user,host from user;
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| user30           | %         |
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
+| user10           | localhost |
+| user20           | localhost |
++------------------+-----------+
+7 rows in set (0.00 sec)
+
+mysql> drop user user10@localhost;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> drop user user20@localhost;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> drop user user30@localhost;
+ERROR 1396 (HY000): Operation DROP USER failed for 'user30'@'localhost'
+mysql> quit
+Bye
+
+C:\Users\Administrator>-u root -p
+'-u'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+C:\Users\Administrator>mysql -u root -p
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 38
+Server version: 8.0.36 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| tesdb              |
+| testdb             |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> select user,host from user;
+ERROR 1046 (3D000): No database selected
+mysql> use mysql
+Database changed
+mysql> select user, host from user;
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| user30           | %         |
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
++------------------+-----------+
+5 rows in set (0.00 sec)
+
+mysql> create user 10DB@localhost identified by '1234';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> create user 20DB@localhost identified by '1234';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> create user 30DB@localhost identified by '1234';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> create user 40DB@localhost identified by '1234';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select use,host from user;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'use,host from user' at line 1
+mysql> select user,host from user;
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| user30           | %         |
+| 10DB             | localhost |
+| 20DB             | localhost |
+| 30DB             | localhost |
+| 40DB             | localhost |
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
++------------------+-----------+
+9 rows in set (0.00 sec)
+
+mysql> drop user 10DB@localhost;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> drop user 20DB@localhost;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> drop user 30DB@localhost;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> drop user 40DB@localhost;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select user,host from user;
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| user30           | %         |
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
++------------------+-----------+
+5 rows in set (0.00 sec)
+
+mysql> drop user user30@localhost;
+ERROR 1396 (HY000): Operation DROP USER failed for 'user30'@'localhost'
+mysql> create database User10DB;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> create database User20DB;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> create database User30DB;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> create database User40DB;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> create user user10@localhost;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> create user user20@localhost;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> create user user30@localhost;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> create user user40@localhost;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select user,host from user;
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| user30           | %         |
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
+| user10           | localhost |
+| user20           | localhost |
+| user30           | localhost |
+| user40           | localhost |
++------------------+-----------+
+9 rows in set (0.00 sec)
+
+mysql> grant create on User10DB.*from user10@localhost;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from user10@localhost' at line 1
+mysql> grant create on User10DB.* user10@localhost;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user10@localhost' at line 1
+mysql> grant create on User10DB.* to user10@localhost;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> grant create,select on User20DB.* to user20@localhost;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> grant create,select,insert,update on User30DB.* to user30@localhost;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> grant all privileges on User40.*to user40@localhost;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> show grants for user40@localhost;
++------------------------------------------------------------+
+| Grants for user40@localhost                                |
++------------------------------------------------------------+
+| GRANT USAGE ON *.* TO `user40`@`localhost`                 |
+| GRANT ALL PRIVILEGES ON `user40`.* TO `user40`@`localhost` |
++------------------------------------------------------------+
+2 rows in set (0.00 sec)
+
+mysql> show grants for user10@localhost;
++------------------------------------------------------+
+| Grants for user10@localhost                          |
++------------------------------------------------------+
+| GRANT USAGE ON *.* TO `user10`@`localhost`           |
+| GRANT CREATE ON `user10db`.* TO `user10`@`localhost` |
++------------------------------------------------------+
+2 rows in set (0.00 sec)
+
+mysql>
