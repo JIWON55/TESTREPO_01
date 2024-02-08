@@ -286,6 +286,52 @@ delimiter ;
 
 call proc_while_03_1(10);
 
+-- N-M의 합
+
+delimiter $$
+create procedure proc_while_04(in n int, in m int)
+begin
+	declare i int;
+    declare sum int;
+    declare tmp int;
+    
+    if n>m
+		then 
+			set tmp = n;
+            set n = m;
+            set m = tmp;
+	end if;
+    
+    while i <=m do
+    set sum = sum+i;
+    set i=i+1;
+    end while;
+    select sum;
+    
+    set i = n;
+    set sum=0;
+    
+    
+end $$
+delimiter ;
+
+
+call proc_while_04(8,5);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -- 구구단 2단
 delimiter $$
 create procedure multiple_2()
@@ -304,6 +350,27 @@ delimiter ;
 drop procedure multiple_2;
 call multiple_2();
 
+-- 강사님 답안
+create table GGD(
+	 dan int,
+     i int,
+     result int
+);
+delimiter $$
+create procedure proc_while_05()
+begin
+	declare i int;
+    set i =1;
+    
+    while i <10 do
+		insert into GGD values(2,i,2*i);
+        set i =i+1;
+        end while;
+        select * from GGD;
+end $$
+delimiter ;
+call proc_while_05();
+
 -- 구구단 N단
 delimiter $$
 create procedure multiple_N(in n int)
@@ -321,3 +388,18 @@ end $$
 delimiter ;
 
 call multiple_N(7);
+
+-- ----------------------------
+-- 반환값 지정
+-- ----------------------------
+
+delimiter $$
+create procedure proc_output_01(in h_val int, out o_val char(100))
+begin
+	select userid into o_val from usertbl where height = h_val;
+end $$
+delimiter ;
+
+set@o_value=''; -- o_val 이 들어갈 공간
+call proc_output_01(174,@o_value); 
+select @o_value;
