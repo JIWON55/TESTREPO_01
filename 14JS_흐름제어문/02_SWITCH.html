@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="d1" style="width: 50px; height: 50px; background-color: orange; position: relative;">
+
+
+    </div>
+
+    <script>
+        
+        // if(num>=100){
+        //     //100점인 경우
+        //     alert("A");
+        // }else if(num>=90){
+        //     //90-99 사이
+        //     alert("B")
+        // }else if(num>=80){
+        //     //80-89 사이
+        //     alert("C")
+        // }else if(num>=70){
+        //     //79-70 사이
+        //     alert("D")
+        // }else{
+        //     //그 외
+        //     alert("F")
+        // }
+
+        //https://bigtop.tistory.com/29
+
+        let num = prompt('점수를 입력하세요.');
+        // //num = parseInt(num);
+        // console.log(typeof num);
+
+
+        switch(num){
+            case 100 : 
+                alert('A')
+                break;
+            case 90 :
+                alert('B')
+                break;
+            case 80 :
+                alert('C')
+                break;
+            case 70 :
+                alert('D')
+                break;
+            case 60 :
+                alert('F')
+                break;
+        }
+
+    
+        let topval=0;
+        let leftval=0;
+        let rightval=0;
+        let bottomval=0;
+        document.addEventListener ('keypress',function(e){
+            //console.log(e.keyCode);
+            const e1 = document.querySelector('.d1');
+            switch(e.keyCode){
+                case 119 :
+                    onsole.log('W');
+                    e1.style.top = (topval--)+"px";
+                    break;
+                case 97 :
+                    console.log('A');
+                    e1.style.left = (leftval--)+"px";
+                    break;
+                case 115 :
+                    console.log('S');
+                    e1.style.top = (topval++)+"px";
+                    break;
+                case 100:
+                    console.log('D');
+                    e1.style.left = (leftval++)+"px";
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>
