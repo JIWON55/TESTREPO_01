@@ -1,0 +1,44 @@
+	정수 타입 		: byte,short,int ,long
+	char 타입 		: ' ' 
+	String 타입 		: " "
+	실수 타입 		: double , float
+	논리 타입 		: boolean
+
+
+	확인 문제1
+
+	정수타입 
+	1byte : byte
+	2byte : char, short
+	4byte : int
+	8byte : long
+
+	실수타입
+	4byte : float
+	8byte : double
+
+	논리타입
+	1byte : boolean
+
+
+	확인문제2
+
+	맞는 코드인지 틀린 코드인지 확인 
+	byte var = 200;							( x 	) // byte의 범위 : -128 ~ 127 선저장은 가능, 후처리 x
+	char var='AB';							( x 	) // char 한단어 AB 입력시 "" 사용
+	char var=65;							( o 	) // 기계는 코드표로 통해 전부 숫자로 변환, 문자를 숫자형으로 저장가능
+	long var=50000000000;					( x 	) // 숫자의 기본 자료형은 int
+	float var = 3.14						( x	  	) // 실수의 기본 자료형은 double
+	double var = 100.0						( o 	) 
+	String var = "나의직업은 "개발자" 입니다.";	( x  	) // 문자열의 범위 "" 의 사이 
+	boolean var = 0;						( x 	) // boolean형은 true, false
+	int v2 = 1e2;							( x	 	) // 1 * 10^2 = 100.0
+	float =1e2f;							( x		) // 
+	
+	byte a = 'a'; -128~127
+	byte b = 'ㄱ'; -128~127
+	short c = 'ㄱ'; -32768 ~ 32767
+	char d = '가'; 0 ~ 65535
+	
+	System.out.println((int)'ㄱ');	// 12593
+	System.out.println((int)'가');	// 44032
