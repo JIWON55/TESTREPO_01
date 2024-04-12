@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- 중구.js -->
+    <script src="js/경찰청112.js"></script>
+
+</head>
+<body>
+    <div style="width:500px;height:500px;border:1px solid;padding:15px;margin:10px auto;">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script>
+       
+        console.log(신고현황);
+
+        const arr_crime_cs = 신고현황.map((item)=> {const {중요범죄,기타범죄, ...rest }=item;
+        return {중요범죄,rest};})
+
+        console.log(arr_crime_cs)
+       
+        
+
+        arr_crime_cs.reduce((acc,item)=>{
+        //    console.log(item)}
+            var values = Object.values(item.rest);
+            let sum =0;
+            values.map(num=>sum+=num);
+            console.log("sum: " + sum);
+
+            if(acc.hasOwnProperty(item.중요범죄)){
+                acc[item.중요범죄] += sum;
+
+            } else{
+                acc[item.중요범죄] = sum;
+            }return acc;
+        },{});
+
+        console.log(arr_crime_cs);
+        const cat_keys = Object.keys(arr_crime_cs);
+        const cat_values = Object.values(arr_crime_cs);
+        const colors = [
+             
+            '#FFCCCC',
+            '#CCFFCC',
+            '#CCE5FF',          
+            '#E5CCFF',        
+            '#FFCCFF',         
+            '#D2B48C',
+        
+        ]
+        console.log(cat_values)
+
+        const drawChart = (labelsArr,dataSet)=>{
+
+            var data = {
+                labels : labelsArr,
+                dataset : [{
+                    label : 'CRIME_LABEL',
+                    data : dataSet,
+                    backgroundColor: colors,
+                borderColor: colors,
+                borderWidth:1
+                }]
+            }
+        
+        var options ={
+            scales : {
+                y:{
+                    beginAtZero : true
+                }
+            }
+        }
+
+        var ctx = document.querySelector('#myChart').getContext('2d');
+
+        var myChart = new Chart(ctx,{
+            type: 'pie',
+            data:data,
+            options : options
+        })
+    }
+        drawChart(cat_keys,cat_values)
+
+
+    </script>
+</body>
+</html>
